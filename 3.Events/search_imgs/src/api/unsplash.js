@@ -1,8 +1,9 @@
 import axios from 'axios';
+require('dotenv').config()
 
 export default axios.create({
     baseURL: 'https://api.unsplash.com',
     headers: {
-        Authorization: 'Client-ID 4mHJiU5YwSEvgSRW33TXL-tJ-B7GmfqtM1KkqiI0sjU'
+        Authorization: `Client-ID ${process.env.UNSPLASH_KEY}`
     }
 });  
